@@ -1,1 +1,128 @@
-tre
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loubaris</title>
+	<link rel="icon" href="images/logo.png">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body onmousemove="effet(event)">
+
+<script type="text/javascript">
+
+	function effet(event) {
+  		var x = event.clientX;
+  		var imagepos = document.getElementById("image");
+  		imagepos.style.left = x/13 + "%";
+
+	}
+	
+</script>
+
+
+<style>
+body{
+	overflow-x: hidden;
+	margin: 0;
+	background-color: #e74c3c;
+}
+
+/* LA BARRE DE NAVIGATION */
+
+
+header{
+	margin: 0;
+	background-color: black;
+}
+.navlogo{
+	height: 100px;
+}
+
+
+.button{
+	font-family: "Lato",sans-serif;
+	transition: 1s;
+	text-transform: uppercase;
+	margin-top: 10px;
+    margin-left: 20px;
+    border-bottom: 3px solid white;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+.button:hover{
+	color: black;
+	border-bottom: 3px solid gray;
+	background-color: white;
+}
+
+/* LE CONTENU DE LA PAGE */
+
+.page{
+	margin-top: 550px;
+}
+.title{
+	transition: 2s;
+	color: white;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif; 
+    text-align: center;
+}
+.boxes{
+	width: 100%;
+	text-align: center;
+}
+.box{
+	height: 200px;
+	width: 200px;
+	border-radius: 20px;
+	border: 3px solid white;
+	display: inline-block;
+	text-align: center;
+	margin: 1em 1em;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "Lato", sans-serif;
+	color: white;
+}
+.imageparalax{
+	position: absolute;
+	top: 70px;
+	z-index: -1;
+	width: 100%;
+	left: 0%;
+
+}
+.imageretro{
+	position: absolute;
+	top: 70px;
+	z-index: -2;
+	width: 100%;
+	left: 0%;
+
+}
+</style>
+<header>
+	<div class="navbar">
+		<img style="vertical-align:middle;height:100px;width:100px;" src="images/logo.png">
+		<span class="buttonlist"><a href="#" class="button">loubaris</a>
+		<a class="button">experience</a>
+		<a class="button">réalisation</a>
+		<a href="/project.html" class="button">Projets</a></span>
+	</div>
+</header>
+
+<div class="page">
+	<h1 class="title">Développeur UI/FRONT-END</h1>
+	<div class="boxes">
+		<div class="box"><p1 style="margin-top: 30px;">HTML</p1></div>
+		<div class="box"><p1>JAVASCRIPT</p1></div>
+		<div class="box"><p1>DESIGN</p1></div>
+	</div>
+	<img class="imageparalax" src="images/landscape.png" id="image">
+	<img class="imageretro" src="images/landscaperetro.png">
+</div>
+
+
+</body>
+</html>
